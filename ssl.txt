@@ -1,0 +1,136 @@
+[Ontem 10:58] Marcos Santos
+    
+
+
+Para habilitar o https no istio, você precisa  criar um secret com o certificado que você tiver ex:
+
+
+
+
+kubectl create -n istio-system secret tls https-credential --key=httpbin.example.com.key --cert=httpbin.example.com.crt
+
+
+
+kubectl create -n istio-system secret tls case-credential --key=uprivate_pefisa.com.br.key --cert=pefisa_oficial.cer
+
+
+
+kubectl create -n mfib secret tls ssl-certificate-secret --key=uprivate_pefisa.com.br.key --cert=pefisa_oficial_ok.cer
+
+
+kubectl create -n istio-system secret tls teste-credential --key=wildcard_2rpnet_io.key --cert=2rp.cer
+
+
+
+Caso a chave esteja com passphrase o K8S não suporta esse comando, você tera que tirar com o comando:
+
+
+openssl rsa -in encryedprivate.key -out unencryed.key
+
+
+
+
+
+Onde: https-credential é o nome da credencial
+
+
+Key = chave privada do certificado
+
+
+Cert = certificado
+
+
+
+
+Depois é necessario mudar o gateway parecido com arquivo abaixo:
+
+
+
+cat <<EOF | kubectl apply -f -
+
+
+apiVersion: networking.istio.io/v1alpha3
+
+
+kind: Gateway
+
+
+metadata:
+
+
+  name: mygateway
+
+
+spec:
+
+
+  selector:
+
+
+    istio: ingressgateway # use istio default ingress gateway
+
+
+  servers:
+
+
+  - port:
+
+
+      number: 443
+
+
+      name: https
+
+
+      protocol: HTTPS
+
+
+    tls:
+
+
+      mode: SIMPLE
+
+
+      credentialName: httpbin-credential # must be the same as secret
+
+
+    hosts:
+
+
+    - httpbin.example.com
+
+
+EOF
+
+
+-credential # must be the same as secret hosts: - httpbin.example.com EOF
+
+
+
+Ex:
+
+
+
+:
+
+
+https://medium.com/better-programming/kubernetes-services-over-https-with-istios-secure-gateways-210b2ce91b71
+
+
+
+https://cloud.google.com/run/docs/gke/bring-your-own-cert
+
+
+
+
+TESTAR SSL
+
+
+https://www.ssllabs.com/ssltest/index.html
+
+
+
+https://www.digicert.com/help/
+
+
+Kubernetes Services over HTTPS With Istio’s Secure GatewaysExpose your microservices over TLS to the external worldmedium.com
