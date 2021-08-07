@@ -4,14 +4,27 @@ WORKDIR /
 
 EXPOSE 80 443
 
-RUN apt update && apt -y install software-properties-common wget sudo
-RUN apt install -y locales apache2 libapache2-mod-php php-pear php php-cgi php-cli php-common php-fpm php-gd php-json php-mysql php-readline php curl php-intl php-ldap php-xml php-mbstring
+#Definir timezone pra não travar no apt update
+ENV TZ=America/Sao_Paulo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+#Instalar dependencias do Syspass
+RUN apt update && apt install -y locales git wget apache2 libapache2-mod-php php-pear php php-cgi php-cli php-common php-fpm php-gd php-json php-mysql php-readline php curl php-intl php-ldap php-xml php-mbstring
 RUN service apache2 restart
-RUN git clone https://github.com/nuxsmin/syspass.git /var/www/html/syspass
+#Permissões/criação de diretorio
+RUN mkdir /var/www/html/syspass
+RUN git clone https://github.com/nuxsmin/sysPass.git  /var/www/html/syspass
+RUN mkdir /var/www/html/syspass/app/backup
 RUN chown www-data -R /var/www/html/syspass
-COPY syspass/app/config /var/www/html/syspass/app/config
 RUN chmod 750 /var/www/html/syspass/app/config /var/www/html/syspass/app/backup
-RUN wget https://raw.githubusercontent.com/composer/getcomposer.org/76a7060ccb93902cd7576b67264ad91c8a2700e2/web/installer -O - -q | php -- --quiet
-RUN echo "<?php header('Location: syspass/);" >> /var/www/html/index.php
+#Copiar meus arquivos do syspass
+RUN rm /syspass/app/config/config.xml
+COPY /syspass/app/config/config.xml /var/www/html/syspass/app/config
+#Dependencias do php com composer
+COPY install_composer.sh /var/www/html/syspass
+RUN chmod +x /var/www/html/syspass/install_composer.sh
+RUN bash /var/www/html/syspass/install_composer.sh
+RUN php composer.phar install --no-dev
+#Apagar arquivo index do apache e redirecionar pra pasta do syspass
 RUN rm /var/www/html/index.html
-RUN rm -r /var/www/html/sysPass
+run echo "<?php header('Location: /syspass');" >> /var/www/html/index.php
+RUN service apache2 restart

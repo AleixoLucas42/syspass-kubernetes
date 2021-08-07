@@ -4,13 +4,11 @@ services:
     container_name: syspass-app
     image: syspass/syspass:3.2.2
     restart: always
-
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - /syspass/app/config:/var/www/html/sysPass/app/config
       - /sysPass/app/backup:/var/www/html/sysPass/app/backup
-
     environment:
       - USE_SSL=yes
