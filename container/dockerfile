@@ -31,4 +31,4 @@ RUN cd /var/www/html/syspass && php /var/www/html/syspass/composer.phar install 
 #Apagar arquivo index do apache e redirecionar pra pasta do syspass
 RUN rm /var/www/html/index.html
 RUN echo "<?php header('Location: '. 'syspass'); exit();" >> /var/www/html/index.php
-ENTRYPOINT service apache2 restart && bash
+CMD service apache2 restart && bash
