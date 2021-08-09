@@ -16,5 +16,5 @@ spec:
         app: syspass
     spec:
       containers:
-      - image: gcr.io/gke-cluster-322402/syspass-kubernetes
+      - image: syspass/syspass
         name: syspass-container
