@@ -16,5 +16,5 @@ spec:
         app: syspass
     spec:
       containers:
-      - image: gcr.io/aleixo-syspass
+      - image: gcr.io/gke-cluster-322402/aleixo-syspass
         name: syspass-container
