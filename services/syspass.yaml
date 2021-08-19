@@ -6,7 +6,7 @@ metadata:
   name: syspass-svc
   namespace: syspass
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: http
     port: 80
