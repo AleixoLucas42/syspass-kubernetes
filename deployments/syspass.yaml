@@ -17,7 +17,6 @@ spec:
     spec:
       volumes:
       - name: syspass-config
-        emptyDir: {}
       containers:
       - image: gcr.io/gke-cluster-322402/aleixo-syspass:ssl
         name: syspass-container
