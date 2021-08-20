@@ -6,7 +6,7 @@ metadata:
   name: syspass-dp
   namespace: syspass
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: syspass
@@ -18,3 +18,16 @@ spec:
       containers:
       - image: gcr.io/gke-cluster-322402/aleixo-syspass:ssl
         name: syspass-container
+        volumeMounts:
+        - name: syspass-config
+          mountPath: /var/www/html/syspass/config
+        - name: syspass-backup
+          mountPath: /var/www/html/syspass/backup
+  volumeClaimTemplates:
+  - metadata:
+      name: syspass-config
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
