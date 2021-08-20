@@ -6,7 +6,7 @@ metadata:
   name: syspass-dp
   namespace: syspass
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: syspass
