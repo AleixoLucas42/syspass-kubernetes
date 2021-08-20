@@ -1,0 +1,343 @@
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.EXCEPTION: logger {"message":"Context not initialized
+#0 /var/www/html/syspass/lib/SP/Core/Context/ContextBase.php(143): SP\Core\Context\ContextBase->checkContext()
+#1 /var/www/html/syspass/lib/SP/Core/Context/SessionContext.php(100): SP\Core\Context\ContextBase->getContextKey(String,Object(SP\Services\User\UserLoginResponse))
+#2 /var/www/html/syspass/lib/SP/Core/Context/SessionContext.php(232): SP\Core\Context\SessionContext->getContextKey(String,Object(SP\Services\User\UserLoginResponse))
+#3 /var/www/html/syspass/lib/SP/Config/Config.php(200): SP\Core\Context\SessionContext->getUserData()
+#4 /var/www/html/syspass/lib/SP/Config/Config.php(121): SP\Config\Config->saveConfig(Object(SP\Config\ConfigData),Boolean)
+#5 /var/www/html/syspass/lib/SP/Config/Config.php(95): SP\Config\Config->initialize()
+#6 /var/www/html/syspass/lib/Definitions.php(65): SP\Config\Config->__construct(Object(SP\Storage\File\XmlHandler),Object(SP\Storage\File\FileCache),Object(DI\Container))
+#7 [internal function]: DI\Definition\Source\DefinitionFile->{closure}(Object(DI\Container))
+#8 /var/www/html/syspass/vendor/php-di/invoker/src/Invoker.php(74): call_user_func_array(Object(Closure),Array)
+#9 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure),Array)
+#10 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition),Array)
+#11 /var/www/html/syspass/vendor/php-di/php-di/src/Container.php(380): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition),Array)
+#12 /var/www/html/syspass/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#13 /var/www/html/syspass/lib/SP/Bootstrap.php(126): DI\Container->get(String)
+#14 /var/www/html/syspass/lib/SP/Bootstrap.php(457): SP\Bootstrap->__construct(Object(DI\Container))
+#15 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap->run(Object(DI\Container))
+#16 /var/www/html/syspass/index.php(28): require(String)","caller":"N/A"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Config file created","caller":"SP\Config\Config::initialize"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.EXCEPTION: logger {"message":"File not found (/var/www/html/syspass/app/cache/icons.cache)
+#0 /var/www/html/syspass/lib/SP/Storage/File/FileCacheBase.php(70): SP\Storage\File\FileHandler->checkFileExists()
+#1 /var/www/html/syspass/lib/SP/Core/UI/Theme.php(159): SP\Storage\File\FileCacheBase->isExpired(Integer)
+#2 /var/www/html/syspass/lib/SP/Core/UI/Theme.php(127): SP\Core\UI\Theme->initIcons()
+#3 /var/www/html/syspass/app/modules/web/Init.php(173): SP\Core\UI\Theme->initTheme(Boolean)
+#4 /var/www/html/syspass/lib/SP/Bootstrap.php(232): SP\Modules\Web\Init->initialize(String)
+#5 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#6 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(879): call_user_func(Object(Closure),Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#7 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(588): Klein\Klein->handleRouteCallback(Object(Klein\Route),Object(Klein\DataCollection\RouteCollection),Array)
+#8 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#9 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap->run(Object(DI\Container))
+#10 /var/www/html/syspass/index.php(28): require(String)","caller":"N/A"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Not installed","caller":"SP\Modules\Web\Init::initialize"}
+[2021-08-19 23:04:14] syspass.EXCEPTION: logger {"message":"File not found (/var/www/html/syspass/app/cache/actions.cache)
+#0 /var/www/html/syspass/lib/SP/Storage/File/FileCacheBase.php(70): SP\Storage\File\FileHandler->checkFileExists()
+#1 /var/www/html/syspass/lib/SP/Core/Acl/Actions.php(90): SP\Storage\File\FileCacheBase->isExpired(Integer)
+#2 /var/www/html/syspass/lib/SP/Core/Acl/Actions.php(78): SP\Core\Acl\Actions->loadCache()
+#3 /var/www/html/syspass/lib/Definitions.php(77): SP\Core\Acl\Actions->__construct(Object(SP\Storage\File\FileCache),Object(SP\Storage\File\XmlHandler))
+#4 [internal function]: DI\Definition\Source\DefinitionFile->{closure}(Object(DI\Container))
+#5 /var/www/html/syspass/vendor/php-di/invoker/src/Invoker.php(74): call_user_func_array(Object(Closure),Array)
+#6 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure),Array)
+#7 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition),Array)
+#8 /var/www/html/syspass/vendor/php-di/php-di/src/Container.php(380): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition),Array)
+#9 /var/www/html/syspass/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#10 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Reference.php(53): DI\Container->get(String)
+#11 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(59): DI\Definition\Reference->resolve(Object(DI\Container))
+#12 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/ParameterResolver.php(78): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\Reference))
+#13 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/ObjectCreator.php(137): DI\Definition\Resolver\ParameterResolver->resolveParameters(Object(DI\Definition\ObjectDefinition\MethodInjection),Object(ReflectionMethod),Array)
+#14 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/ObjectCreator.php(71): DI\Definition\Resolver\ObjectCreator->createInstance(Object(DI\Definition\AutowireDefinition),Array)
+#15 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\ObjectCreator->resolve(Object(DI\Definition\AutowireDefinition),Array)
+#16 /var/www/html/syspass/vendor/php-di/php-di/src/Container.php(380): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\AutowireDefinition),Array)
+#17 /var/www/html/syspass/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\AutowireDefinition))
+#18 /var/www/html/syspass/app/modules/web/Controllers/Traits/WebControllerTrait.php(140): DI\Container->get(String)
+#19 /var/www/html/syspass/app/modules/web/Controllers/SimpleControllerBase.php(64): SP\Modules\Web\Controllers\SimpleControllerBase->setUp(Object(DI\Container))
+#20 /var/www/html/syspass/lib/SP/Bootstrap.php(238): SP\Modules\Web\Controllers\SimpleControllerBase->__construct(Object(DI\Container),String)
+#21 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#22 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(879): call_user_func(Object(Closure),Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#23 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(588): Klein\Klein->handleRouteCallback(Object(Klein\Route),Object(Klein\DataCollection\RouteCollection),Array)
+#24 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#25 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap->run(Object(DI\Container))
+#26 /var/www/html/syspass/index.php(28): require(String)","caller":"N/A"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"ACTION CACHE MISS","caller":"SP\Core\Acl\Actions::mapAndSave"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Saved actions cache","caller":"SP\Core\Acl\Actions::saveCache"}
+[2021-08-19 23:04:14] syspass.EXCEPTION: logger {"message":"Response is locked
+#0 /var/www/html/syspass/vendor/klein/klein/src/Klein/AbstractResponse.php(157): Klein\AbstractResponse->requireUnlocked()
+#1 /var/www/html/syspass/lib/SP/Http/Json.php(154): Klein\AbstractResponse->body(String)
+#2 /var/www/html/syspass/lib/SP/Mvc/Controller/ControllerTrait.php(69): SP\Http\Json->returnJson(Object(SP\Http\JsonResponse))
+#3 /var/www/html/syspass/app/modules/web/Controllers/SimpleControllerBase.php(94): SP\Modules\Web\Controllers\SimpleControllerBase->sessionLogout(Object(SP\Http\Request),Object(SP\Config\ConfigData),Object(Closure))
+#4 /var/www/html/syspass/app/modules/web/Controllers/SimpleControllerBase.php(71): SP\Modules\Web\Controllers\SimpleControllerBase->handleSessionTimeout()
+#5 /var/www/html/syspass/lib/SP/Bootstrap.php(238): SP\Modules\Web\Controllers\SimpleControllerBase->__construct(Object(DI\Container),String)
+#6 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#7 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(879): call_user_func(Object(Closure),Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#8 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(588): Klein\Klein->handleRouteCallback(Object(Klein\Route),Object(Klein\DataCollection\RouteCollection),Array)
+#9 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#10 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap->run(Object(DI\Container))
+#11 /var/www/html/syspass/index.php(28): require(String)","caller":"N/A"}
+[2021-08-19 23:04:14] syspass.EXCEPTION: logger {"message":"Response is locked
+#0 /var/www/html/syspass/vendor/klein/klein/src/Klein/AbstractResponse.php(157): Klein\AbstractResponse->requireUnlocked()
+#1 /var/www/html/syspass/lib/SP/Bootstrap.php(149): Klein\AbstractResponse->body(String)
+#2 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Klein),String,String,Object(Klein\Exceptions\LockedResponseException))
+#3 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(936): call_user_func(Object(Closure),Object(Klein\Klein),String,String,Object(Klein\Exceptions\LockedResponseException))
+#4 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(645): Klein\Klein->error(Object(Klein\Exceptions\LockedResponseException))
+#5 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#6 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap->run(Object(DI\Container))
+#7 /var/www/html/syspass/index.php(28): require(String)","caller":"N/A"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded icons cache","caller":"SP\Core\UI\Theme::initIcons"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:14] syspass.EXCEPTION: logger {"message":"File not found (/var/www/html/syspass/app/config/pubkey.pem)
+#0 /var/www/html/syspass/lib/SP/Core/Crypt/CryptPKI.php(82): SP\Storage\File\FileHandler->checkFileExists()
+#1 /var/www/html/syspass/lib/SP/Core/Crypt/CryptPKI.php(67): SP\Core\Crypt\CryptPKI->setUp()
+#2 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/ObjectCreator.php(142): SP\Core\Crypt\CryptPKI->__construct(Object(phpseclib\Crypt\RSA))
+#3 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/ObjectCreator.php(71): DI\Definition\Resolver\ObjectCreator->createInstance(Object(DI\Definition\ObjectDefinition),Array)
+#4 /var/www/html/syspass/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\ObjectCreator->resolve(Object(DI\Definition\ObjectDefinition),Array)
+#5 /var/www/html/syspass/vendor/php-di/php-di/src/Container.php(380): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\ObjectDefinition),Array)
+#6 /var/www/html/syspass/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\ObjectDefinition))
+#7 /var/www/html/syspass/app/modules/web/Controllers/Helpers/LayoutHelper.php(125): DI\Container->get(String)
+#8 /var/www/html/syspass/app/modules/web/Controllers/Helpers/LayoutHelper.php(378): SP\Modules\Web\Controllers\Helpers\LayoutHelper->initBody()
+#9 /var/www/html/syspass/app/modules/web/Controllers/InstallController.php(59): SP\Modules\Web\Controllers\Helpers\LayoutHelper->getPublicLayout(String,String)
+#10 [internal function]: SP\Modules\Web\Controllers\InstallController->indexAction()
+#11 /var/www/html/syspass/lib/SP/Bootstrap.php(240): call_user_func_array(Array,Array)
+#12 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#13 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(879): call_user_func(Object(Closure),Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#14 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(588): Klein\Klein->handleRouteCallback(Object(Klein\Route),Object(Klein\DataCollection\RouteCollection),Array)
+#15 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#16 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap->run(Object(DI\Container))
+#17 /var/www/html/syspass/index.php(28): require(String)","caller":"N/A"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded icons cache","caller":"SP\Core\UI\Theme::initIcons"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded icons cache","caller":"SP\Core\UI\Theme::initIcons"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded icons cache","caller":"SP\Core\UI\Theme::initIcons"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded icons cache","caller":"SP\Core\UI\Theme::initIcons"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:14] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded icons cache","caller":"SP\Core\UI\Theme::initIcons"}
+[2021-08-19 23:04:14] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Not installed","caller":"SP\Modules\Web\Init::initialize"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:25] syspass.EXCEPTION: logger {"message":"Response is locked
+#0 /var/www/html/syspass/vendor/klein/klein/src/Klein/AbstractResponse.php(211): Klein\AbstractResponse->requireUnlocked()
+#1 /var/www/html/syspass/vendor/klein/klein/src/Klein/AbstractResponse.php(523): Klein\AbstractResponse->code(Integer)
+#2 /var/www/html/syspass/app/modules/web/Controllers/IndexController.php(50): Klein\AbstractResponse->redirect(String)
+#3 [internal function]: SP\Modules\Web\Controllers\IndexController->indexAction()
+#4 /var/www/html/syspass/lib/SP/Bootstrap.php(240): call_user_func_array(Array,Array)
+#5 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#6 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(879): call_user_func(Object(Closure),Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#7 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(588): Klein\Klein->handleRouteCallback(Object(Klein\Route),Object(Klein\DataCollection\RouteCollection),Array)
+#8 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#9 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap->run(Object(DI\Container))
+#10 /var/www/html/syspass/index.php(28): require(String)","caller":"N/A"}
+[2021-08-19 23:04:25] syspass.EXCEPTION: logger {"message":"Response is locked
+#0 /var/www/html/syspass/vendor/klein/klein/src/Klein/AbstractResponse.php(157): Klein\AbstractResponse->requireUnlocked()
+#1 /var/www/html/syspass/lib/SP/Bootstrap.php(149): Klein\AbstractResponse->body(String)
+#2 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Klein),String,String,Object(Klein\Exceptions\LockedResponseException))
+#3 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(936): call_user_func(Object(Closure),Object(Klein\Klein),String,String,Object(Klein\Exceptions\LockedResponseException))
+#4 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(645): Klein\Klein->error(Object(Klein\Exceptions\LockedResponseException))
+#5 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#6 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap->run(Object(DI\Container))
+#7 /var/www/html/syspass/index.php(28): require(String)","caller":"N/A"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:04:25] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:04:25] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:04:25] syspass.EXCEPTION: logger {"message":"Unable to connect to DB
+#0 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(216): SP\Storage\Database\MySQLHandler->getConnection()
+#1 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(175): SP\Storage\Database\Database->prepareQueryData(Object(SP\Storage\Database\QueryData))
+#2 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(136): SP\Storage\Database\Database->doQuery(Object(SP\Storage\Database\QueryData))
+#3 /var/www/html/syspass/lib/SP/Repositories/Plugin/PluginRepository.php(451): SP\Storage\Database\Database->doSelect(Object(SP\Storage\Database\QueryData))
+#4 /var/www/html/syspass/lib/SP/Services/Plugin/PluginService.php(292): SP\Repositories\Plugin\PluginRepository->getEnabled()
+#5 /var/www/html/syspass/lib/SP/Plugin/PluginManager.php(462): SP\Services\Plugin\PluginService->getEnabled()
+#6 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(117): SP\Plugin\PluginManager->getEnabledPlugins()
+#7 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(70): SP\Modules\Web\Controllers\BootstrapController->getPlugins()
+#8 [internal function]: SP\Modules\Web\Controllers\BootstrapController->getEnvironmentAction()
+#9 /var/www/html/syspass/lib/SP/Bootstrap.php(240): call_user_func_array(Array,Array)
+#10 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#11 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(879): call_user_func(Object(Closure),Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#12 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(588): Klein\Klein->handleRouteCallback(Object(Klein\Route),Object(Klein\DataCollection\RouteCollection),Array)
+#13 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#14 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap->run(Object(DI\Container))
+#15 /var/www/html/syspass/index.php(28): require(String)","caller":"N/A"}
+[2021-08-19 23:04:25] syspass.EXCEPTION: logger {"message":"(P) SQLSTATE[HY000] [2002] No such file or directory
+#0 /var/www/html/syspass/lib/SP/Storage/Database/MySQLHandler.php(109): PDO->__construct('mysql:charset=u...', '', '', Array)
+#1 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(216): SP\Storage\Database\MySQLHandler->getConnection()
+#2 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(175): SP\Storage\Database\Database->prepareQueryData(Object(SP\Storage\Database\QueryData))
+#3 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(136): SP\Storage\Database\Database->doQuery(Object(SP\Storage\Database\QueryData))
+#4 /var/www/html/syspass/lib/SP/Repositories/Plugin/PluginRepository.php(451): SP\Storage\Database\Database->doSelect(Object(SP\Storage\Database\QueryData))
+#5 /var/www/html/syspass/lib/SP/Services/Plugin/PluginService.php(292): SP\Repositories\Plugin\PluginRepository->getEnabled()
+#6 /var/www/html/syspass/lib/SP/Plugin/PluginManager.php(462): SP\Services\Plugin\PluginService->getEnabled()
+#7 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(117): SP\Plugin\PluginManager->getEnabledPlugins()
+#8 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(70): SP\Modules\Web\Controllers\BootstrapController->getPlugins()
+#9 [internal function]: SP\Modules\Web\Controllers\BootstrapController->getEnvironmentAction()
+#10 /var/www/html/syspass/lib/SP/Bootstrap.php(240): call_user_func_array(Array, Array)
+#11 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Request), Object(Klein\Response), Object(Klein\ServiceProvider), Object(Klein\App), Object(Klein\Klein), Object(Klein\DataCollection\RouteCollection), Array)
+#12 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(879): call_user_func(Object(Closure), Object(Klein\Request), Object(Klein\Response), Object(Klein\ServiceProvider), Object(Klein\App), Object(Klein\Klein), Object(Klein\DataCollection\RouteCollection), Array)
+#13 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(588): Klein\Klein->handleRouteCallback(Object(Klein\Route), Object(Klein\DataCollection\RouteCollection), Array)
+#14 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#15 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap::run(Object(DI\Container))
+#16 /var/www/html/syspass/index.php(28): require('/var/www/html/s...')
+#17 {main}","caller":"N/A"}
+[2021-08-19 23:04:25] syspass.EXCEPTION: logger {"message":"Unable to connect to DB
+#0 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(175): SP\Storage\Database\Database->prepareQueryData(Object(SP\Storage\Database\QueryData))
+#1 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(136): SP\Storage\Database\Database->doQuery(Object(SP\Storage\Database\QueryData))
+#2 /var/www/html/syspass/lib/SP/Repositories/Plugin/PluginRepository.php(451): SP\Storage\Database\Database->doSelect(Object(SP\Storage\Database\QueryData))
+#3 /var/www/html/syspass/lib/SP/Services/Plugin/PluginService.php(292): SP\Repositories\Plugin\PluginRepository->getEnabled()
+#4 /var/www/html/syspass/lib/SP/Plugin/PluginManager.php(462): SP\Services\Plugin\PluginService->getEnabled()
+#5 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(117): SP\Plugin\PluginManager->getEnabledPlugins()
+#6 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(70): SP\Modules\Web\Controllers\BootstrapController->getPlugins()
+#7 [internal function]: SP\Modules\Web\Controllers\BootstrapController->getEnvironmentAction()
+#8 /var/www/html/syspass/lib/SP/Bootstrap.php(240): call_user_func_array(Array,Array)
+#9 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#10 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(879): call_user_func(Object(Closure),Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#11 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(588): Klein\Klein->handleRouteCallback(Object(Klein\Route),Object(Klein\DataCollection\RouteCollection),Array)
+#12 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#13 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap->run(Object(DI\Container))
+#14 /var/www/html/syspass/index.php(28): require(String)","caller":"N/A"}
+[2021-08-19 23:04:25] syspass.EXCEPTION: logger {"message":"(P) Unable to connect to DB
+#0 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(216): SP\Storage\Database\MySQLHandler->getConnection()
+#1 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(175): SP\Storage\Database\Database->prepareQueryData(Object(SP\Storage\Database\QueryData))
+#2 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(136): SP\Storage\Database\Database->doQuery(Object(SP\Storage\Database\QueryData))
+#3 /var/www/html/syspass/lib/SP/Repositories/Plugin/PluginRepository.php(451): SP\Storage\Database\Database->doSelect(Object(SP\Storage\Database\QueryData))
+#4 /var/www/html/syspass/lib/SP/Services/Plugin/PluginService.php(292): SP\Repositories\Plugin\PluginRepository->getEnabled()
+#5 /var/www/html/syspass/lib/SP/Plugin/PluginManager.php(462): SP\Services\Plugin\PluginService->getEnabled()
+#6 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(117): SP\Plugin\PluginManager->getEnabledPlugins()
+#7 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(70): SP\Modules\Web\Controllers\BootstrapController->getPlugins()
+#8 [internal function]: SP\Modules\Web\Controllers\BootstrapController->getEnvironmentAction()
+#9 /var/www/html/syspass/lib/SP/Bootstrap.php(240): call_user_func_array(Array, Array)
+#10 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Request), Object(Klein\Response), Object(Klein\ServiceProvider), Object(Klein\App), Object(Klein\Klein), Object(Klein\DataCollection\RouteCollection), Array)
+#11 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(879): call_user_func(Object(Closure), Object(Klein\Request), Object(Klein\Response), Object(Klein\ServiceProvider), Object(Klein\App), Object(Klein\Klein), Object(Klein\DataCollection\RouteCollection), Array)
+#12 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(588): Klein\Klein->handleRouteCallback(Object(Klein\Route), Object(Klein\DataCollection\RouteCollection), Array)
+#13 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#14 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap::run(Object(DI\Container))
+#15 /var/www/html/syspass/index.php(28): require('/var/www/html/s...')
+#16 {main}","caller":"N/A"}
+[2021-08-19 23:04:25] syspass.EXCEPTION: logger {"message":"Unable to connect to DB
+#0 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(175): SP\Storage\Database\Database->prepareQueryData(Object(SP\Storage\Database\QueryData))
+#1 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(136): SP\Storage\Database\Database->doQuery(Object(SP\Storage\Database\QueryData))
+#2 /var/www/html/syspass/lib/SP/Repositories/Plugin/PluginRepository.php(451): SP\Storage\Database\Database->doSelect(Object(SP\Storage\Database\QueryData))
+#3 /var/www/html/syspass/lib/SP/Services/Plugin/PluginService.php(292): SP\Repositories\Plugin\PluginRepository->getEnabled()
+#4 /var/www/html/syspass/lib/SP/Plugin/PluginManager.php(462): SP\Services\Plugin\PluginService->getEnabled()
+#5 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(117): SP\Plugin\PluginManager->getEnabledPlugins()
+#6 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(70): SP\Modules\Web\Controllers\BootstrapController->getPlugins()
+#7 [internal function]: SP\Modules\Web\Controllers\BootstrapController->getEnvironmentAction()
+#8 /var/www/html/syspass/lib/SP/Bootstrap.php(240): call_user_func_array(Array,Array)
+#9 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#10 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(879): call_user_func(Object(Closure),Object(Klein\Request),Object(Klein\Response),Object(Klein\ServiceProvider),Object(Klein\App),Object(Klein\Klein),Object(Klein\DataCollection\RouteCollection),Array)
+#11 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(588): Klein\Klein->handleRouteCallback(Object(Klein\Route),Object(Klein\DataCollection\RouteCollection),Array)
+#12 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#13 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap->run(Object(DI\Container))
+#14 /var/www/html/syspass/index.php(28): require(String)","caller":"N/A"}
+[2021-08-19 23:04:25] syspass.EXCEPTION: logger {"message":"(P) Unable to connect to DB
+#0 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(216): SP\Storage\Database\MySQLHandler->getConnection()
+#1 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(175): SP\Storage\Database\Database->prepareQueryData(Object(SP\Storage\Database\QueryData))
+#2 /var/www/html/syspass/lib/SP/Storage/Database/Database.php(136): SP\Storage\Database\Database->doQuery(Object(SP\Storage\Database\QueryData))
+#3 /var/www/html/syspass/lib/SP/Repositories/Plugin/PluginRepository.php(451): SP\Storage\Database\Database->doSelect(Object(SP\Storage\Database\QueryData))
+#4 /var/www/html/syspass/lib/SP/Services/Plugin/PluginService.php(292): SP\Repositories\Plugin\PluginRepository->getEnabled()
+#5 /var/www/html/syspass/lib/SP/Plugin/PluginManager.php(462): SP\Services\Plugin\PluginService->getEnabled()
+#6 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(117): SP\Plugin\PluginManager->getEnabledPlugins()
+#7 /var/www/html/syspass/app/modules/web/Controllers/BootstrapController.php(70): SP\Modules\Web\Controllers\BootstrapController->getPlugins()
+#8 [internal function]: SP\Modules\Web\Controllers\BootstrapController->getEnvironmentAction()
+#9 /var/www/html/syspass/lib/SP/Bootstrap.php(240): call_user_func_array(Array, Array)
+#10 [internal function]: SP\Bootstrap->SP\{closure}(Object(Klein\Request), Object(Klein\Response), Object(Klein\ServiceProvider), Object(Klein\App), Object(Klein\Klein), Object(Klein\DataCollection\RouteCollection), Array)
+#11 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(879): call_user_func(Object(Closure), Object(Klein\Request), Object(Klein\Response), Object(Klein\ServiceProvider), Object(Klein\App), Object(Klein\Klein), Object(Klein\DataCollection\RouteCollection), Array)
+#12 /var/www/html/syspass/vendor/klein/klein/src/Klein/Klein.php(588): Klein\Klein->handleRouteCallback(Object(Klein\Route), Object(Klein\DataCollection\RouteCollection), Array)
+#13 /var/www/html/syspass/lib/SP/Bootstrap.php(464): Klein\Klein->dispatch(Object(Klein\Request))
+#14 /var/www/html/syspass/lib/Base.php(75): SP\Bootstrap::run(Object(DI\Container))
+#15 /var/www/html/syspass/index.php(28): require('/var/www/html/s...')
+#16 {main}","caller":"N/A"}
+[2021-08-19 23:05:18] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:18] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:05:18] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:18] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:05:18] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Extensions checked","caller":"SP\Core\PhpExtensionChecker::checkMandatory"}
+[2021-08-19 23:05:22] syspass.ERROR: logger {"message":"Could not set locale","caller":"SP\Core\Language::setLocales"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Saved icons cache","caller":"SP\Core\UI\Theme::saveIcons"}
+[2021-08-19 23:05:22] syspass.INFO: logger {"message":"Loaded actions cache","caller":"SP\Core\Acl\Actions::loadCache"}
