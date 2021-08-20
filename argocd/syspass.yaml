@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: syspass
+  name: syspass-dp
+  namespace: syspass
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: syspass
+  template:
+    metadata:
+      labels:
+        app: syspass
+    spec:
+      containers:
+      - image: gcr.io/gke-cluster-322402/aleixo-syspass
+        name: syspass-container
