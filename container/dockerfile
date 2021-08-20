@@ -21,7 +21,7 @@ RUN service apache2 restart
 #Permissões/criação de diretorio
 RUN mkdir /var/www/html/syspass
 RUN git clone https://github.com/nuxsmin/sysPass.git  /var/www/html/syspass
-COPY container/app/config/config.xml /var/www/html/syspass/app/config/
+COPY container/syspass/app/config/config.xml /var/www/html/syspass/app/config/
 RUN chown www-data -R /var/www/html/syspass
 
 #Preparar arquivos do syspass
