@@ -16,10 +16,11 @@ spec:
         app: syspass
     spec:
       containers:
+      volumes:
+      - name: syspass-config
+        emptyDir: {}
       - image: gcr.io/gke-cluster-322402/aleixo-syspass:ssl
         name: syspass-container
         volumeMounts:
         - name: syspass-config
-          mountPath: /var/www/html/syspass/config
-        - name: syspass-backup
-          mountPath: /var/www/html/syspass/backup
+          mountPath: /var/www/html/syspass
