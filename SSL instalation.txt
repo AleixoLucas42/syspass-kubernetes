@@ -1,2 +1,0 @@
-#reference
-https://cloud.google.com/kubernetes-engine/docs/how-to/ingress-multi-ssl#user-managed-certificates
